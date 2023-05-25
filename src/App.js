@@ -1,25 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import { Canvas, useFrame, Vector3 } from '@react-three/fiber'
+import { useRef, useState, useEffect } from 'react'
+import PbBox from './components/Boxa';
+import FloorPlane from './components/FloorPlane'
+import { OrbitControls, KeyboardControls } from '@react-three/drei'
+import { gridHelper } from '@react-three/fiber'
+import { useControls } from './components/useControls';
 
-function App() {
+export const App = () => {
+  
+    useControls()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Canvas camera={{fov:45}}>
+        <color attach="background" args={["#06092c"]} />
+      <pointLight position={[-20, 10, 25]} />
+      <PbBox position={[1.6, .8, -1]} />
+      <FloorPlane position={[-2.0, .7, -1]}/>
+      <gridHelper
+              args={[100, 20, "#4D089A", "#4D089A"]}
+
+      />
+
+      <OrbitControls />
+    </Canvas>
   );
 }
 
-export default App;
