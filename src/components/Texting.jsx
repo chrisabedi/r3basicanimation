@@ -6,20 +6,24 @@ Command: npx gltfjsx@6.2.4 ./public/texting.glb
 import React, { useRef, useEffect} from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { LoopOnce } from 'three'
+import * as THREE from 'three'
 
-export default function Model(props) {
+
+export default function Model() {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/texting.glb')
   const { actions } = useAnimations(animations, group)
+  const vec = new THREE.Vector3()
 
   useEffect(()=>{
     console.log('second actions',actions)
+    console.log('nodes',nodes)
 
-    actions['Armature|mixamo.com|Layer0'].play(LoopOnce)
-
+    actions['Armature|mixamo.com|Layer0'].setLoop(LoopOnce).play().halt(5)
+    
   })
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={group} dispose={null}>
       <group name="Scene">
         <group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
           <primitive object={nodes.mixamorigHips} />
