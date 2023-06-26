@@ -3,8 +3,6 @@ import { useFrame } from '@react-three/fiber'
 import { useRef, useState } from 'react'
 import {  meshBasicMaterial, Mesh, planeGeomerty, shaderMaterial } from 'three'
 
-
-
 const vertexShader = `
 void main() {
   vec4 modelPosition = modelMatrix * vec4(position, 1.0);
