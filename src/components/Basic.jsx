@@ -58,7 +58,7 @@ export default function Model({action}) {
   )
 }
 
-useGLTF.preload('/basic.glb')
+useGLTF.preload(process.env.PUBLIC_URL + 'basic.glb')
 
 
 function usePrevious(value){
