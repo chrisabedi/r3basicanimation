@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/r3basicanimations/static/css/main.9097f284.css",
-    "main.js": "/r3basicanimations/static/js/main.46d983cf.js",
-    "static/js/787.d2783dee.chunk.js": "/r3basicanimations/static/js/787.d2783dee.chunk.js",
-    "index.html": "/r3basicanimations/index.html",
-    "main.9097f284.css.map": "/r3basicanimations/static/css/main.9097f284.css.map",
-    "main.46d983cf.js.map": "/r3basicanimations/static/js/main.46d983cf.js.map",
-    "787.d2783dee.chunk.js.map": "/r3basicanimations/static/js/787.d2783dee.chunk.js.map"
+    "main.css": "/r3basicanimation/static/css/main.9097f284.css",
+    "main.js": "/r3basicanimation/static/js/main.a31ee8b6.js",
+    "static/js/787.d2783dee.chunk.js": "/r3basicanimation/static/js/787.d2783dee.chunk.js",
+    "index.html": "/r3basicanimation/index.html",
+    "main.9097f284.css.map": "/r3basicanimation/static/css/main.9097f284.css.map",
+    "main.a31ee8b6.js.map": "/r3basicanimation/static/js/main.a31ee8b6.js.map",
+    "787.d2783dee.chunk.js.map": "/r3basicanimation/static/js/787.d2783dee.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9097f284.css",
-    "static/js/main.46d983cf.js"
+    "static/js/main.a31ee8b6.js"
   ]
 }
