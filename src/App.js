@@ -44,7 +44,6 @@ const [action, setAction] = useState("Idle.001")
           <Suspense fallback={null}>
             <Basic action={action} position={[0,0,1]}/>
           </Suspense>
-          <CameraHelper/>
 
         </Physics>
 
@@ -64,12 +63,6 @@ const [action, setAction] = useState("Idle.001")
 				>
 					reset
 				</button>
-        <button
-        type="button"
-        onClick={()=> {
-          cameraControlRef.current?.position()
-        }}
-        >zoomin</button>
         <button
         type="button"
         onClick={() => {
