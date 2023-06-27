@@ -11,7 +11,7 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 
 export default function Model({action}) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/basic.glb')
+  const { nodes, materials, animations } = useGLTF(process.env.PUBLIC_URL + '/basic.glb')
   let mixer = new THREE.AnimationMixer(nodes);
   let previousAction = usePrevious(action)
   const { actions } = useAnimations(animations, group)
@@ -58,7 +58,7 @@ export default function Model({action}) {
   )
 }
 
-useGLTF.preload(process.env.PUBLIC_URL + 'basic.glb')
+useGLTF.preload(process.env.PUBLIC_URL + '/basic.glb')
 
 
 function usePrevious(value){
